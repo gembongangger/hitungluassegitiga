@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hitung Luas Segitiga</title>
+  <style>
+    form {
+      width: 400px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
+    label {
+      font-size: 18px;
+    }
+    input[type="text"] {
+      font-size: 18px;
+      padding: 10px;
+      margin: 10px;
+      width: 200px;
+    }
+    button[type="button"] {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin-top: 20px;
+      background-color: lightblue;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #hasil {
+      text-align: center;
+      font-size: 24px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hitung Luas Segitiga</h1>
+  <form>
+    <label>Alas:</label>
+    <input type="text" id="alas"><br><br>
+    <label>Tinggi:</label>
+    <input type="text" id="tinggi"><br><br>
+    <button type="button" onclick="hitungLuas()">Hitung Luas</button>
+  </form>
+  <br><br>
+  <p id="hasil"></p>
+  
+  <script>
+    function hitungLuas() {
+      var alas = parseFloat(document.getElementById("alas").value);
+      var tinggi = parseFloat(document.getElementById("tinggi").value);
+      var luas = ( alas * tinggi )/2;
+      document.getElementById("hasil").innerHTML = "Luas segitiga adalah: " + luas;
+    }
+  </script>
+</body>
+</html>
